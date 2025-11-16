@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -14,6 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="#page-top">
@@ -21,20 +21,21 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#the-game">The Living Garden</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about-us">El Equipo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <ul class="navbar-nav ms-auto" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" id="game-tab-link" data-bs-toggle="tab" href="#the-game-pane" role="tab" aria-controls="the-game-pane" aria-selected="true">The Living Garden</a></li>
+                        <li class="nav-item"><a class="nav-link" id="about-tab-link" data-bs-toggle="tab" href="#about-us-pane" role="tab" aria-controls="about-us-pane" aria-selected="false">El Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link" id="contact-tab-link" data-bs-toggle="tab" href="#contact-pane" role="tab" aria-controls="contact-pane" aria-selected="false">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container px-5">
                     <h1 class="masthead-heading mb-0">Ripple Games</h1>
                     <h2 class="masthead-subheading mb-0 fs-5 fw-normal">Somos una empresa desarrolladora de videojuegos, apasionada por crear experiencias interactivas y emocionantes para jugadores de todo el mundo.</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#the-game">Descubre Nuestro Juego</a>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" id="header-cta" data-bs-toggle="tab" href="#the-game-pane" role="tab" aria-controls="the-game-pane" aria-selected="true">Descubre Nuestro Juego</a>
                 </div>
             </div>
             <div class="bg-circle-1 bg-circle"></div>
@@ -42,72 +43,165 @@
             <div class="bg-circle-3 bg-circle"></div>
             <div class="bg-circle-4 bg-circle"></div>
         </header>
-        <section id="the-game">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.png" alt="Ilustración del juego The Living Garden" /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">The Living Garden</h2>
-                            <h3 class="lead mb-4">Simulación y Gestión Ecológica Cozy</h3>
-                            <p style="text-align: justify;">
-                                The Living Garden es un videojuego de simulación y gestión de recursos centrado en la ecología y la interdependencia de especies frente al colapso climático. Es un juego catalogado como *cozy* de simulación y gestión ecológica.
-                            </p>
-                            <p style="text-align: justify;">
-                                Te unirás al "Programa de Santuarios Botánicos", una iniciativa para mantener focos de vida silvestre, para habitar una parcela olvidada y crear un Jardín Santuario: un refugio vital diseñado para albergar y proteger especies que luchan por sobrevivir.
-                            </p>
-                            <p style="text-align: justify;">
-                                Tu misión como jugador es cultivar este santuario, gestionando recursos básicos como el agua y el abono, y creando micro-ecosistemas de resistencia. Cada partida es única gracias a las condiciones iniciales del terreno y los patrones climáticos generados proceduralmente. El objetivo es alcanzar la máxima biodiversidad y autosuficiencia del jardín.
-                            </p>
-                            <a class="btn btn-warning btn-xl rounded-pill mt-3 me-3" href="https://ripple-games.itch.io/the-living-garden" target="_blank">
-                                <i class="fab fa-itch-io me-2"></i> ¡Juega la Demo en Itch.io!
-                            </a>
-                            <a class="btn btn-outline-primary rounded-pill mt-3" href="#contact">Contacta para Inversión</a>
+
+        <div class="tab-content" id="main-tab-content">
+            
+            <div class="tab-pane fade show active" id="the-game-pane" role="tabpanel" aria-labelledby="game-tab-link">
+                
+                <section id="the-game" class="py-5">
+                    <div class="container px-5">
+                        
+                        <div class="row gx-5 align-items-center mb-5">
+                            <div class="col-lg-6 order-lg-2">
+                                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/04.jpg" alt="Ilustración del juego The Living Garden" /></div>
+                            </div>
+                            <div class="col-lg-6 order-lg-1">
+                                <div class="p-5">
+                                    <h2 class="display-4">The Living Garden</h2>
+                                    <h3 class="lead mb-4">Simulación y Gestión Ecológica Cozy</h3>
+                                    <p style="text-align: justify;">
+                                        The Living Garden es un videojuego de simulación y gestión de recursos centrado en la ecología y la interdependencia de especies frente al colapso climático. Es un juego catalogado como *cozy* de simulación y gestión ecológica.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Te unirás al "Programa de Santuarios Botánicos", una iniciativa para mantener focos de vida silvestre, para habitar una parcela olvidada y crear un Jardín Santuario: un refugio vital diseñado para albergar y proteger especies que luchan por sobrevivir.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Tu misión como jugador es cultivar este santuario, gestionando recursos básicos como el agua y el abono, y creando micro-ecosistemas de resistencia. Cada partida es única gracias a las condiciones iniciales del terreno y los patrones climáticos generados proceduralmente. El objetivo es alcanzar la máxima biodiversidad y autosuficiencia del jardín.
+                                    </p>
+                                    <a class="btn btn-warning btn-xl rounded-pill mt-3 me-3" href="https://ripple-games.itch.io/the-living-garden" target="_blank">
+                                        <i class="fab fa-itch-io me-2"></i> ¡Juega la Demo en Itch.io!
+                                    </a>
+                                    <a class="btn btn-outline-primary rounded-pill mt-3" href="#contact">Contacta para Inversión</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="about-us">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.png" alt="Equipo de Ripple Games" /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">Conoce a Ripple Games</h2>
-                            <p style="text-align: justify;">Somos un equipo apasionado de desarrolladores independientes, unidos por la misión de crear juegos que inspiren. Creemos que la innovación nace de la colaboración y el entusiasmo. Descubre quiénes somos los creadores detrás de esta aventura.</p>
-                            <a class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#teamModal" href="#">Nuestros Roles</a>
+
+                        <div class="row gx-5 pt-5 pb-3 justify-content-center border-top">
+                            <div class="col-lg-10 text-center">
+                                <h2 class="display-5 mb-5">Catálogo de Especies: Flora de Resistencia</h2>
+                                <p class="lead text-muted mb-5">Conoce las plantas esenciales para el Santuario. ¡La sinergia es clave para sobrevivir al clima extremo!</p>
+                                
+                                <div id="plant-carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Planta 1"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="1" aria-label="Planta 2"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="2" aria-label="Planta 3"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="3" aria-label="Planta 4"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="4" aria-label="Planta 5"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="5" aria-label="Planta 6"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="6" aria-label="Planta 7"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="7" aria-label="Planta 8"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="8" aria-label="Planta 9"></button>
+                                        <button type="button" data-bs-target="#plant-carousel" data-bs-slide-to="9" aria-label="Planta 10"></button>
+                                    </div>
+                                    
+                                    <div class="carousel-inner">
+                                        
+                                        <div class="carousel-item active">
+                                            <img src="assets/img/14.jpg" class="d-block w-100 mx-auto" alt="Lirio de Sombra" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/05.jpg" class="d-block w-100 mx-auto" alt="Vid de Agua" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/12.jpg" class="d-block w-100 mx-auto" alt="Cheflera" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/08.jpg" class="d-block w-100 mx-auto" alt="Bambú" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="assets/img/10.jpg" class="d-block w-100 mx-auto" alt="Higuera Silvestre" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/07.jpg" class="d-block w-100 mx-auto" alt="Flor Solar" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/13.jpg" class="d-block w-100 mx-auto" alt="Musgo de Humedad" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/11.jpg" class="d-block w-100 mx-auto" alt="Cactus Barrera" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/09.jpg" class="d-block w-100 mx-auto" alt="Arbusto Nitro" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+                                        
+                                        <div class="carousel-item">
+                                            <img src="assets/img/06.jpg" class="d-block w-100 mx-auto" alt="Helecho Fuente" style="max-height: 400px; object-fit: contain;">
+                                        </div>
+
+                                    </div>
+                                    
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#plant-carousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Anterior</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#plant-carousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Siguiente</span>
+                                    </button>
+                                </div>
+                                
+                                <p class="mt-5 text-center text-muted small">
+                                    *Nota: El catálogo completo de especies se revelará pronto. ¡Sigue nuestras redes sociales para más actualizaciones!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        </div>
+                </section>
             </div>
-        </section>
-        
-        <section id="contact">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.png" alt="Iconos de Contacto" /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Hagamos Contacto</h2>
-                            <p style="text-align: justify;">¿Tienes preguntas, sugerencias de colaboración o quieres simplemente decir hola? No dudes en contactarnos. ¡Síguenos en nuestras redes sociales para estar al día de las novedades!</p>
-                            <a class="btn btn-outline-primary rounded-pill mt-3" href="mailto:ripplegames25@gmail.com">Envíanos un Email</a>
-                            <div class="mt-4">
-                                <a href="https://x.com/ripple_games25" class="text-dark me-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-                                <a href="https://www.instagram.com/ripple_games" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                                <a href="https://www.youtube.com/@RippleGames25" class="text-dark"><i class="fab fa-youtube fa-2x"></i></a>
+
+            <div class="tab-pane fade" id="about-us-pane" role="tabpanel" aria-labelledby="about-tab-link">
+                <section id="about-us" class="py-5">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-lg-6">
+                                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/15.png" alt="Equipo de Ripple Games" /></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <h2 class="display-4">Conoce a Ripple Games</h2>
+                                    <p style="text-align: justify;">Somos un equipo apasionado de desarrolladores independientes, unidos por la misión de crear juegos que inspiren. Creemos que la innovación nace de la colaboración y el entusiasmo. Descubre quiénes somos los creadores detrás de esta aventura.</p>
+                                    <a class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#teamModal" href="#">Nuestros Roles</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+            
+            <div class="tab-pane fade" id="contact-pane" role="tabpanel" aria-labelledby="contact-tab-link">
+                <section id="contact" class="py-5">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-lg-6 order-lg-2">
+                                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/Leo2.png" alt="Iconos de Contacto" /></div>
+                            </div>
+                            <div class="col-lg-6 order-lg-1">
+                                <div class="p-5">
+                                    <h2 class="display-4">Hagamos Contacto</h2>
+                                    <p style="text-align: justify;">¿Tienes preguntas, sugerencias de colaboración o quieres simplemente decir hola? No dudes en contactarnos. ¡Síguenos en nuestras redes sociales para estar al día de las novedades!</p>
+                                    <a class="btn btn-outline-primary rounded-pill mt-3" href="mailto:ripplegames25@gmail.com">Envíanos un Email</a>
+                                    <div class="mt-4">
+                                        <a href="https://x.com/ripple_games25" class="text-dark me-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                                        <a href="https://www.instagram.com/ripple_games" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                                        <a href="https://www.youtube.com/@RippleGames25" class="text-dark"><i class="fab fa-youtube fa-2x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Ripple Games 2025</p></div>
         </footer>
@@ -128,35 +222,30 @@
                                 <img class="img-fluid rounded-circle mb-3" src="assets/img/LauraB.jpg" alt="Foto Miembro 1" style="width: 150px; height: 150px; object-fit: cover;"/>
                                 <h5 class="mt-2">Laura Blázquez</h5>
                                 <p class="text-muted">Artista 2D y Game Designer</p>
-                                <!--<a href="#!" class="text-primary"><i class="fab fa-linkedin fa-lg me-2"></i>LinkedIn</a>-->
                             </div>
                             
                             <div class="col-md-4 col-sm-6 mb-4">
                                 <img class="img-fluid rounded-circle mb-3" src="assets/img/Victor.jpg" alt="Foto Miembro 2" style="width: 150px; height: 150px; object-fit: cover;"/>
                                 <h5 class="mt-2">Víctor Cabello</h5>
                                 <p class="text-muted">Programador</p>
-                                <!--<a href="#!" class="text-primary"><i class="fab fa-artstation fa-lg me-2"></i>Portafolio</a>-->
                             </div>
 
                             <div class="col-md-4 col-sm-6 mb-4">
                                 <img class="img-fluid rounded-circle mb-3" src="assets/img/LauraM.jpg" alt="Foto Miembro 3" style="width: 150px; height: 150px; object-fit: cover;"/>
                                 <h5 class="mt-2">Laura Manso</h5>
                                 <p class="text-muted">Game Designer, Programadora y Musica</p>
-                                <!--<a href="#!" class="text-primary"><i class="fab fa-twitter fa-lg me-2"></i>Twitter</a>-->
                             </div>
 
                             <div class="col-md-4 col-sm-6 mb-4">
                                 <img class="img-fluid rounded-circle mb-3" src="assets/img/Alvaro.jpg" alt="Foto Miembro 4" style="width: 150px; height: 150px; object-fit: cover;"/>
                                 <h5 class="mt-2">Álvaro Rosa</h5>
                                 <p class="text-muted">Programador, Musica y SFX</p>
-                                <!--<a href="#!" class="text-primary"><i class="fas fa-music fa-lg me-2"></i>Música</a>-->
                             </div>
                             
                             <div class="col-md-4 col-sm-6 mb-4">
                                 <img class="img-fluid rounded-circle mb-3" src="assets/img/Guillermo.jpg" alt="Foto Miembro 5" style="width: 150px; height: 150px; object-fit: cover;"/>
                                 <h5 class="mt-2">Guillermo Sánchez</h5>
                                 <p class="text-muted">Artista UI, Marketing y Community</p>
-                                <!--<a href="#!" class="text-primary"><i class="fab fa-instagram fa-lg me-2"></i>Instagram</a> -->
                             </div>
                             
                         </div>
@@ -170,5 +259,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
-
 </html>
