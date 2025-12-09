@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -64,9 +65,9 @@
                                 <div class="p-5">
                                     
                                     <img class="img-fluid rounded-circle mx-auto d-block mb-4" 
-                                         src="assets/img/04.jpg" 
-                                         alt="Ilustración principal del juego The Living Garden" 
-                                         style="max-width: 400px; height: auto;" 
+                                            src="assets/img/04.jpg" 
+                                            alt="Ilustración principal del juego The Living Garden" 
+                                            style="max-width: 400px; height: auto;" 
                                     />
 
                                     <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden">
@@ -97,7 +98,22 @@
                                     <a class="btn btn-warning btn-xl rounded-pill mt-3 me-3" href="https://ripple-games.itch.io/the-living-garden" target="_blank">
                                         <i class="fab fa-itch-io me-2"></i> ¡Juega la Demo en Itch.io!
                                     </a>
-                                    <a class="btn btn-outline-primary rounded-pill mt-3" data-bs-toggle="tab" href="#contact-pane" role="tab" aria-controls="contact-pane" aria-selected="false">Contacta para Inversión</a>
+                                    
+                                    <a class="btn btn-outline-primary rounded-pill mt-3" 
+                                       href="#contact-pane" 
+                                       role="tab" 
+                                       aria-controls="contact-pane" 
+                                       aria-selected="false"
+                                       onclick="
+                                           var tab = new bootstrap.Tab(document.getElementById('contact-tab-link')); 
+                                           tab.show(); 
+                                           setTimeout(() => { 
+                                               document.getElementById('contact-pane').scrollIntoView({ behavior: 'smooth' }); 
+                                           }, 100); 
+                                           return false;
+                                       ">
+                                       Contacta para Inversión
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +209,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
-                                    <h2 class="display-4">Conoce a Ripple Games</h2>
+                                    <h2 class="display-5">Conoce a Ripple Games</h2>
                                     <p style="text-align: justify;">Somos un equipo apasionado de desarrolladores independientes, unidos por la misión de crear juegos que inspiren. Creemos que la innovación nace de la colaboración y el entusiasmo. Descubre quiénes somos los creadores detrás de esta aventura.</p>
                                     <a class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#teamModal" href="#">Nuestros Roles</a>
                                 </div>
